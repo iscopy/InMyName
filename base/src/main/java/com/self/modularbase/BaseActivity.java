@@ -47,6 +47,7 @@ public abstract class BaseActivity extends AppCompatActivity implements View.OnC
         Bundle bundle = getIntent().getExtras();
 
         initParms(bundle);
+        mContextView = LayoutInflater.from(this).inflate(bindLayout(), null);
         /*View mView = bindView();
         if (null == mView) {
             mContextView = LayoutInflater.from(this).inflate(bindLayout(), null);
